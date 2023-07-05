@@ -1,0 +1,18 @@
+version: "3"
+services:
+
+  pg:
+    image: postgres:14
+    ports:
+        - "5432:5432"
+    env_file:
+      - ./.env
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    volumes:
+      - ../db/dumps:/docker-entrypoint-initdb.d
+      - pg-data:/var/lib/postgresql/data
+
+volumes:
+  pg-data:
+    driver: local

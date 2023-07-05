@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "fedstat-parser"
+version = "0.1.0"
+description = ""
+authors = ["Mikhail Kochurov <firepanda70@gmail.com>"]
+readme = "README.md"
+packages = [{include = "fedstat_parser"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+selenium = "^4.10.0"
+requests = "^2.31.0"
+bs4 = "^0.0.1"
+peewee = "^3.16.2"
+psycopg2 = "^2.9.6"
+pydantic = "^2.0"
+pydantic-settings = "^2.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
