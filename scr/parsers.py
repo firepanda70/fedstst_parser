@@ -9,6 +9,7 @@ def load_urban_env_stat() -> PageElement:
     browser = webdriver.Edge()
     browser.get('https://www.fedstat.ru/indicator/59146')
     grid = browser.find_element(By.ID, 'grid')
+    time.sleep(2)
     year_filter = grid.find_element(By.XPATH, './/div[2]/div[1]/div[1]/div[2]/table/thead/tr[1]/th/a')
     year_filter.click()
     form_checkbox = grid.find_element(By.XPATH, './/div[2]/div[2]/form/ul/li/label/span')
